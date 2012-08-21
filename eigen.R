@@ -1,0 +1,10 @@
+a=matrix(c(2,-2,2,-2,-1,4,2,4,-1),3,3)
+e=eigen(a)
+e
+attach(e)
+va=vlaues
+ve=vectors
+a%*%ve[,1]
+3*ve[,1]
+#由上述结果可知，vectors中第一列向量是第一个特征值的特征向量
+ve%*%diag(va)%*%solve(ve)
